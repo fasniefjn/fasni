@@ -1,7 +1,7 @@
 // routes/akun.js
 const express = require("express");
 const router = express.Router();
-const db = require("../db/connection");
+const db = require("./connection");
 
 router.get("/", (req, res) => {
   db.query("SELECT * FROM akun", (err, results) => {
@@ -45,3 +45,4 @@ router.delete("/:no_akun", (req, res) => {
 });
 
 module.exports = router;
+
