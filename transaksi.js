@@ -1,7 +1,7 @@
 // routes/transaksi.js
 const express = require("express");
 const router = express.Router();
-const db = require("../db/connection");
+const db = require("./connection");
 
 router.get("/dashboard", (req, res) => {
   const masukSql = "SELECT IFNULL(SUM(jumlah),0) AS total_masuk FROM transaksi WHERE jenis = 'masuk'";
@@ -103,3 +103,4 @@ router.delete("/:id", (req, res) => {
 });
 
 module.exports = router;
+
