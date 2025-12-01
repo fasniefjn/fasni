@@ -10,8 +10,8 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Routes
-const akunRoutes = require("./routes/akun");
-const transaksiRoutes = require("./routes/transaksi");
+const akunRoutes = require("./akun");
+const transaksiRoutes = require("./transaksi");
 
 app.get("/", (req, res) => {
   res.send("Fasni Efwa Juniar<br><h1>MI 4A</h1>");
@@ -25,3 +25,4 @@ app.use("/api", transaksiRoutes); // untuk /api/dashboard
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
+
